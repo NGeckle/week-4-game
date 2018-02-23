@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <title>Gem Collector</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Gem Collector</h1>
+    </div>
+    <div class="body">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are 4 gems below. By clicking on a gem you will add a specific amount of points to your total score.</p>
+        <p>You win the game if your total score matches the random number, but if your total score goes above the random number, you lose.</p>
+        <p>The value of each gem is hidden until you click on it.</p>
+        <p>Each time the games starts, the values of each gem will change.</p>
+        <p>Click the "Start" button to start. When a win or loss has been added to your score, click the start button again to reset the random number.</p>
+    </div>
+    <div class="startButton">
+        <button id="startButton">Start</button>
+    </div>
+    <div class="randNum">
+        <h2 id="randNum"></h2>
+    </div>
+    <div class="score">
+        <p>Wins: <span id="totalWins">0</span></p>
+        <p>Losses: <span id="totalLosses">0</span></p>
+    </div>
+    <div class="gems">
+        <img src="assets/images/amethyst.jpg" id="aImgRand">
+        <img src="assets/images/ruby.jpg" id="rImgRand">
+        <img src="assets/images/emerald.jpg" id="eImgRand">
+        <img src="assets/images/sapphire.png" id="sImgRand">
+    </div>
+    <div class="total">
+        <p>Your total score is:</p>
+    </div>
+    <div class="totalScore">
+        <h2 id="totalScore"></h2>
+    </div>
+</body>
+</html>

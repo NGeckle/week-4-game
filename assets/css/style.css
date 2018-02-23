@@ -1,0 +1,9 @@
+img {
+    width: 100px;
+    height: 100px;
+}
+
+img:hover {
+    box-shadow: 0 1px 8px black; 
+}
+

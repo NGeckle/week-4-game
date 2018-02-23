@@ -35,121 +35,103 @@ $(document).ready(function () {
         randomNumber.push(rand);
     }
     
-    var numRandom = randomNumber[Math.floor(Math.random() * randomNumber.length)];
+    
+    
+    $("#startButton").on("click", function () {
+        var numRandom = randomNumber[Math.floor(Math.random() * randomNumber.length)];
+        $("#randNum").text(numRandom);
     
 
-    $("#startButton").on("click", function () {
-        $("#randNum").text(numRandom);
-    })
+        var amRandom = aRand[Math.floor(Math.random() * aRand.length)];
 
-    var amRandom = aRand[Math.floor(Math.random() * aRand.length)];
-
-    $("#aImgRand").on("click", function () {
-        if (score === 0) {
-            score = score + amRandom;
+        $("#aImgRand").off("click");
+        $("#aImgRand").on("click", function () {
+            
+            score += amRandom;
             $("#totalScore").text(score);
-        } 
-        else if (score >= 1) {
-            score = score + amRandom;
-            $("#totalScore").text(score);
-        }
 
-        if (score === numRandom) {
-            win++;
-            $("#totalWins").text(win);
-            score = 0;
-            $("#totalScore").text(score);
-        } 
-        else if (score > numRandom) {
-            lose++;
-            $("#totalLosses").text(lose);
-            score = 0;
-            $("#totalScore").text(score);
-        }
-    })
+            if (score === numRandom) {
+                win++;
+                $("#totalWins").text(win);
+                score = 0;
+                $("#totalScore").text(score);
+            } 
+            else if (score > numRandom) {
+                lose++;
+                $("#totalLosses").text(lose);
+                score = 0;
+                $("#totalScore").text(score);
+            }
+        })
 
-    var rubRandom = rRand[Math.floor(Math.random() * rRand.length)];
+        var rubRandom = rRand[Math.floor(Math.random() * rRand.length)];
 
-    $("#rImgRand").on("click", function () {
-        if (score === 0) {
+        $("#rImgRand").off("click");
+        $("#rImgRand").on("click", function () {
             score = score + rubRandom;
             $("#totalScore").text(score);
-        } 
-        else if (score >= 1) {
-            score = score + rubRandom;
-            $("#totalScore").text(score);
-        }
 
-        if (score === numRandom) {
-            win++;
-            $("#totalWins").text(win);
-            score = 0;
-            $("#totalScore").text(score);
-           
-        } 
-        else if (score > numRandom) {
-            lose++;
-            $("#totalLosses").text(lose);
-            score = 0;
-            $("#totalScore").text(score);
+            if (score === numRandom) {
+                win++;
+                $("#totalWins").text(win);
+                score = 0;
+                $("#totalScore").text(score);
             
-        }
-    })
+            } 
+            else if (score > numRandom) {
+                lose++;
+                $("#totalLosses").text(lose);
+                score = 0;
+                $("#totalScore").text(score);
+                
+            }
+        })
 
-    var emRandom = eRand[Math.floor(Math.random() * eRand.length)];
+        var emRandom = eRand[Math.floor(Math.random() * eRand.length)];
 
-    $("#eImgRand").on("click", function () {
-        if (score === 0) {
-            score = score + emRandom;
-            $("#totalScore").text(score);
-        } 
-        else if (score >= 1) {
-            score = score + emRandom;
-            $("#totalScore").text(score);
-        }
+        $("#eImgRand").off("click");
+        $("#eImgRand").on("click", function () {
+                score = score + emRandom;
+                $("#totalScore").text(score);
 
-        if (score === numRandom) {
-            win++;
-            $("#totalWins").text(win);
-            score = 0;
-            $("#totalScore").text(score);
-            
-        } 
-        else if (score > numRandom) {
-            lose++;
-            $("#totalLosses").text(lose);
-            score = 0;
-            $("#totalScore").text(score);
-            
-        }
-    })
+            if (score === numRandom) {
+                win++;
+                $("#totalWins").text(win);
+                score = 0;
+                $("#totalScore").text(score);
+                
+            } 
+            else if (score > numRandom) {
+                lose++;
+                $("#totalLosses").text(lose);
+                score = 0;
+                $("#totalScore").text(score);
+                
+            }
+        })
 
-    var sapRandom = sRand[Math.floor(Math.random() * sRand.length)];
+        var sapRandom = sRand[Math.floor(Math.random() * sRand.length)];
 
-    $("#sImgRand").on("click", function () {
-        if (score === 0) {
-            score = score + sapRandom;
-            $("#totalScore").text(score);
-        } 
-        else if (score >= 1) {
-            score = score + sapRandom;
-            $("#totalScore").text(score);
-        }
+        $("#sImgRand").off("click");
+        $("#sImgRand").on("click", function () {
+                score = score + sapRandom;
+                $("#totalScore").text(score);
 
-        if (score === numRandom) {
-            win++;
-            $("#totalWins").text(win);
-            score = 0;
-            $("#totalScore").text(score);
-            
-        } 
-        else if (score > numRandom) {
-            lose++;
-            $("#totalLosses").text(lose);
-            score = 0;
-            $("#totalScore").text(score);
-            
-        }
+            if (score === numRandom) {
+                win++;
+                $("#totalWins").text(win);
+                score = 0;
+                $("#totalScore").text(score);
+                
+            } 
+            else if (score > numRandom) {
+                lose++;
+                $("#totalLosses").text(lose);
+                score = 0;
+                $("#totalScore").text(score);
+                
+            }
+        })
     })
 
     

@@ -9,7 +9,7 @@
     <script type="text/javascript" src="assets/javascript/game.js"></script>
     <title>Gem Collector</title>
 </head>
-<body>
+<body background="assets/images/background.jpg">
     <div class="header">
         <h1>Gem Collector</h1>
     </div>
@@ -19,17 +19,19 @@
         <p>You win the game if your total score matches the random number, but if your total score goes above the random number, you lose.</p>
         <p>The value of each gem is hidden until you click on it.</p>
         <p>Each time the games starts, the values of each gem will change.</p>
-        <p>Click the "Start" button to start.</p>
+        <p>Click the "Start" button to start. When you either win or lose, click the "Start" button to to receive a new random number.</p>
     </div>
     <div class="startButton">
         <button id="startButton">Start</button>
     </div>
-    <div class="randNum">
-        <h2 id="randNum"></h2>
-    </div>
-    <div class="score">
-        <p>Wins: <span id="totalWins">0</span></p>
-        <p>Losses: <span id="totalLosses">0</span></p>
+    <div id="wrapper">
+        <div class="randNum">
+            <h2 id="randNum"></h2>
+        </div>
+        <div class="score">
+            <p>Wins: <span id="totalWins">0</span></p>
+            <p>Losses: <span id="totalLosses">0</span></p>
+        </div>
     </div>
     <div class="gems">
         <img src="assets/images/amethyst.jpg" id="aImgRand">

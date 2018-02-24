@@ -36,7 +36,6 @@ $(document).ready(function () {
     }
     
     
-    
     $("#startButton").on("click", function () {
         var numRandom = randomNumber[Math.floor(Math.random() * randomNumber.length)];
         $("#randNum").text(numRandom);
